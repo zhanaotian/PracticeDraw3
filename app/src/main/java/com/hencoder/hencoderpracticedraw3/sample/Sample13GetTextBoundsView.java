@@ -9,6 +9,13 @@ import android.support.annotation.Nullable;
 import android.util.AttributeSet;
 import android.view.View;
 
+/**
+ * getTextBounds(String text, int start, int end, Rect bounds)
+ * 获取文字的显示范围。
+ * text 是要测量的文字，
+ * start 和 end 分别是文字的起始和结束位置，
+ * bounds 是存储文字显示范围的对象，方法在测算完成之后会把结果写进 bounds。
+ */
 public class Sample13GetTextBoundsView extends View {
     Paint paint1 = new Paint(Paint.ANTI_ALIAS_FLAG);
     Paint paint2 = new Paint(Paint.ANTI_ALIAS_FLAG);

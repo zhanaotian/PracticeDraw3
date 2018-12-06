@@ -7,6 +7,10 @@ import android.support.annotation.Nullable;
 import android.util.AttributeSet;
 import android.view.View;
 
+/**
+ * setTextSize(float textSize)
+ * 设置文字大小。
+ */
 public class Sample03SetTextSizeView extends View {
     Paint paint = new Paint(Paint.ANTI_ALIAS_FLAG);
     String text = "Hello HenCoder";

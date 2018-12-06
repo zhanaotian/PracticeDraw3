@@ -7,6 +7,10 @@ import android.support.annotation.Nullable;
 import android.util.AttributeSet;
 import android.view.View;
 
+/**
+ * @author paihaozhan
+ * 使用 Paint.setTextScaleX() 来改变文字宽度
+ */
 public class Practice09SetTextScaleXView extends View {
     Paint paint = new Paint(Paint.ANTI_ALIAS_FLAG);
     String text = "Hello HenCoder";
@@ -25,8 +29,7 @@ public class Practice09SetTextScaleXView extends View {
 
     {
         paint.setTextSize(60);
-
-        // 使用 Paint.setTextScaleX() 来改变文字宽度
+        paint.setTextScaleX(3);
     }
 
     @Override

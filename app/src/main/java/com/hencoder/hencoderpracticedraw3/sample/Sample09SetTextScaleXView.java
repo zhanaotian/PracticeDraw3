@@ -7,6 +7,10 @@ import android.support.annotation.Nullable;
 import android.util.AttributeSet;
 import android.view.View;
 
+/**
+ * setTextScaleX(float scaleX)
+ * 设置文字横向放缩。也就是文字变胖变瘦。
+ */
 public class Sample09SetTextScaleXView extends View {
     Paint paint = new Paint(Paint.ANTI_ALIAS_FLAG);
     String text = "Hello HenCoder";

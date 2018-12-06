@@ -7,31 +7,34 @@ import android.support.annotation.Nullable;
 import android.util.AttributeSet;
 import android.view.View;
 
+/**
+ * @author paihaozhan
+ * 使用 drawText() 来绘制文字
+ * 文字坐标： (50, 100)
+ */
 public class Practice01DrawTextView extends View {
-    Paint paint = new Paint(Paint.ANTI_ALIAS_FLAG);
-    String text = "Hello HenCoder";
+  Paint paint = new Paint(Paint.ANTI_ALIAS_FLAG);
+  String text = "Hello HenCoder";
 
-    public Practice01DrawTextView(Context context) {
-        super(context);
-    }
+  public Practice01DrawTextView(Context context) {
+    super(context);
+  }
 
-    public Practice01DrawTextView(Context context, @Nullable AttributeSet attrs) {
-        super(context, attrs);
-    }
+  public Practice01DrawTextView(Context context, @Nullable AttributeSet attrs) {
+    super(context, attrs);
+  }
 
-    public Practice01DrawTextView(Context context, @Nullable AttributeSet attrs, int defStyleAttr) {
-        super(context, attrs, defStyleAttr);
-    }
+  public Practice01DrawTextView(Context context, @Nullable AttributeSet attrs, int defStyleAttr) {
+    super(context, attrs, defStyleAttr);
+  }
 
-    {
-        paint.setTextSize(60);
-    }
+  {
+    paint.setTextSize(60);
+  }
 
-    @Override
-    protected void onDraw(Canvas canvas) {
-        super.onDraw(canvas);
-
-        // 使用 drawText() 来绘制文字
-        // 文字坐标： (50, 100)
-    }
+  @Override
+  protected void onDraw(Canvas canvas) {
+    super.onDraw(canvas);
+    canvas.drawText(text, 50, 100, paint);
+  }
 }

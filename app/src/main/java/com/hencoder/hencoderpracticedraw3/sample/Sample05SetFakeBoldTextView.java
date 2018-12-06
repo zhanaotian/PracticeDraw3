@@ -7,32 +7,37 @@ import android.support.annotation.Nullable;
 import android.util.AttributeSet;
 import android.view.View;
 
+/**
+ * setFakeBoldText(boolean fakeBoldText)
+ * 是否使用伪粗体。
+ */
 public class Sample05SetFakeBoldTextView extends View {
-    Paint paint = new Paint(Paint.ANTI_ALIAS_FLAG);
-    String text = "Hello HenCoder";
+  Paint paint = new Paint(Paint.ANTI_ALIAS_FLAG);
+  String text = "Hello HenCoder";
 
-    public Sample05SetFakeBoldTextView(Context context) {
-        super(context);
-    }
+  public Sample05SetFakeBoldTextView(Context context) {
+    super(context);
+  }
 
-    public Sample05SetFakeBoldTextView(Context context, @Nullable AttributeSet attrs) {
-        super(context, attrs);
-    }
+  public Sample05SetFakeBoldTextView(Context context, @Nullable AttributeSet attrs) {
+    super(context, attrs);
+  }
 
-    public Sample05SetFakeBoldTextView(Context context, @Nullable AttributeSet attrs, int defStyleAttr) {
-        super(context, attrs, defStyleAttr);
-    }
+  public Sample05SetFakeBoldTextView(Context context, @Nullable AttributeSet attrs,
+      int defStyleAttr) {
+    super(context, attrs, defStyleAttr);
+  }
 
-    {
-        paint.setTextSize(60);
+  {
+    paint.setTextSize(60);
 
-        paint.setFakeBoldText(true);
-    }
+    paint.setFakeBoldText(true);
+  }
 
-    @Override
-    protected void onDraw(Canvas canvas) {
-        super.onDraw(canvas);
+  @Override
+  protected void onDraw(Canvas canvas) {
+    super.onDraw(canvas);
 
-        canvas.drawText(text, 50, 100, paint);
-    }
+    canvas.drawText(text, 50, 100, paint);
+  }
 }

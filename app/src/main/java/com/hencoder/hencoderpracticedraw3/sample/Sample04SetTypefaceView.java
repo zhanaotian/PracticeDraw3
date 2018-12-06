@@ -8,6 +8,10 @@ import android.support.annotation.Nullable;
 import android.util.AttributeSet;
 import android.view.View;
 
+/**
+ * setTypeface(Typeface typeface)
+ * 设置字体。
+ */
 public class Sample04SetTypefaceView extends View {
     Paint paint = new Paint(Paint.ANTI_ALIAS_FLAG);
     String text = "Hello HenCoder";

@@ -7,32 +7,37 @@ import android.support.annotation.Nullable;
 import android.util.AttributeSet;
 import android.view.View;
 
+/**
+ * setStrikeThruText(boolean strikeThruText)
+ * 是否加删除线。
+ */
 public class Sample06SetStrikeThruTextView extends View {
-    Paint paint = new Paint(Paint.ANTI_ALIAS_FLAG);
-    String text = "Hello HenCoder";
+  Paint paint = new Paint(Paint.ANTI_ALIAS_FLAG);
+  String text = "Hello HenCoder";
 
-    public Sample06SetStrikeThruTextView(Context context) {
-        super(context);
-    }
+  public Sample06SetStrikeThruTextView(Context context) {
+    super(context);
+  }
 
-    public Sample06SetStrikeThruTextView(Context context, @Nullable AttributeSet attrs) {
-        super(context, attrs);
-    }
+  public Sample06SetStrikeThruTextView(Context context, @Nullable AttributeSet attrs) {
+    super(context, attrs);
+  }
 
-    public Sample06SetStrikeThruTextView(Context context, @Nullable AttributeSet attrs, int defStyleAttr) {
-        super(context, attrs, defStyleAttr);
-    }
+  public Sample06SetStrikeThruTextView(Context context, @Nullable AttributeSet attrs,
+      int defStyleAttr) {
+    super(context, attrs, defStyleAttr);
+  }
 
-    {
-        paint.setTextSize(60);
+  {
+    paint.setTextSize(60);
 
-        paint.setStrikeThruText(true);
-    }
+    paint.setStrikeThruText(true);
+  }
 
-    @Override
-    protected void onDraw(Canvas canvas) {
-        super.onDraw(canvas);
+  @Override
+  protected void onDraw(Canvas canvas) {
+    super.onDraw(canvas);
 
-        canvas.drawText(text, 50, 100, paint);
-    }
+    canvas.drawText(text, 50, 100, paint);
+  }
 }
