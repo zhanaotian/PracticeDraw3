@@ -29,7 +29,6 @@ public class Sample02StaticLayoutView extends View {
 
     {
         textPaint.setTextSize(60);
-        // 这两行的位置不能换哟
         staticLayout = new StaticLayout(text, textPaint, 600, Layout.Alignment.ALIGN_NORMAL, 1, 0, true);
     }
 

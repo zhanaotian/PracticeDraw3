@@ -47,7 +47,19 @@ public class Sample14GetFontMetricsView extends View {
   protected void onDraw(Canvas canvas) {
     super.onDraw(canvas);
     canvas.drawRect(50, top, getWidth() - 50, bottom, paint1);
+
+    /**
+     * top线Y坐标 = baseline线的y坐标 + fontMetric.top；
+     * ascent线Y坐标 = baseline线的y坐标 + fontMetric.ascent；
+     * descent线Y坐标 = baseline线的y坐标 + fontMetric.descent；
+     * bottom线Y坐标 = baseline线的y坐标 + fontMetric.bottom；
+     */
     int middle = (top + bottom) / 2;
+
+    float top = middle + fontMetrics.top;
+    float ascent = middle + fontMetrics.ascent;
+    float descent = middle + fontMetrics.descent;
+    float bottom = middle + fontMetrics.bottom;
     canvas.drawText(texts[0], 100, middle + yOffset, paint2);
     canvas.drawText(texts[1], 200, middle + yOffset, paint2);
     canvas.drawText(texts[2], 300, middle + yOffset, paint2);
